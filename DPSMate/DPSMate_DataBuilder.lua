@@ -683,7 +683,7 @@ DPSMate.DB.VARIABLES_LOADED = function()
 		DPSMate:SendMessage("DPSMate build "..DPSMate.VERSION.." has been loaded!")
 		DPSMate:SendMessage("This is a remastered build, consider it the last one. I have focused on reducing the complexity in this update and fix the remaining bugs!")
 		DPSMate:SendMessage("If anyone is interested in further fixing this addon, adding features etc. feel free to make a pull request in the repo!")
-		DPSMate:SendMessage("Also, If you would like to upload raid logs and armory, take a look at https://legacyplayers.com");
+		DPSMate:SendMessage("Turtle fix by Fedi")
 		this.loaded = true
 		DPSMate.Options.PLAYER_ENTERING_WORLD()
 		

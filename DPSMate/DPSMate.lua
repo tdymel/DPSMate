@@ -349,7 +349,7 @@ function DPSMate:TableLength(t)
 	local count = 0
 	if (t) then
 		count = getn(t)
-		if count==0 then
+		if count<=1 then
 			for _,_ in pairs(t) do
 				count = count + 1
 			end
