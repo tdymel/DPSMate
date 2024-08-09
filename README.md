@@ -11,15 +11,18 @@ This is experimental so expect all your previous damage reports/heart to be lost
 2. Put the contents of the folder into your Interface/AddOn folder. Make sure that there is no DPSMate-master folder.
 3. I recommend to increase the addon memory to 150 mb.
 4. Remove DPSMate.lua and DPSMate.lua.bak in your `WTF/Account/YOUR ACC NAME/Kronos/YOUR CHAR NAME/SavedVariables/` (if you had DPSMate installed before)
-5. I recommend to disable SW_Stats.  
-6. Add these lines to your WTF/config.wtf:  
+   - Do this while you are logged OUT of the game, otherwise it will try to write on top of the deleted files and all hell will break loose
+6. I recommend to disable SW_Stats.  
+7. Add these lines to your WTF/config.wtf:
+```
 SET CombatLogRangeParty "150"  
 SET CombatLogRangePartyPet "150"  
 SET CombatLogRangeFriendlyPlayers "150"  
 SET CombatLogRangeFriendlyPlayersPets "150"  
 SET CombatLogRangeHostilePlayers "150"  
 SET CombatLogRangeHostilePlayersPets "150"  
-SET CombatLogRangeCreature "150"  
+SET CombatLogRangeCreature "150"
+```
 
 # DPSMate #
 
