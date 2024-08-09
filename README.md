@@ -1,4 +1,28 @@
+If you are also having problems with DPSMate not showing some group members for no reason at all, I made a quick update to the addon which should in theory fix the problem:
+https://github.com/Fedilious/DPSMate/archive/refs/heads/master.zip
+
+Before running it you should **remove your character only(!!!!!!) DPSMate.lua**, that is follow step 4 from the README:
+Remove DPSMate.lua and DPSMate.lua.bak in your WTF/Account/<YOUR ACC NAME>/Nordanaar/<YOUR CHAR NAME>/SavedVariables/ 
+
+This is experimental so expect all your previous damage reports/heart to be lost/exploded ^_^
+
+## Download and install:
+1. Download the [addon folder](https://github.com/Fedilious/DPSMate/archive/refs/heads/master.zip) here.
+2. Put the contents of the folder into your Interface/AddOn folder. Make sure that there is no DPSMate-master folder.
+3. I recommend to increase the addon memory to 150 mb.
+4. Remove DPSMate.lua and DPSMate.lua.bak in your `WTF/Account/YOUR ACC NAME/Kronos/YOUR CHAR NAME/SavedVariables/` (if you had DPSMate installed before)
+5. I recommend to disable SW_Stats.  
+6. Add these lines to your WTF/config.wtf:  
+SET CombatLogRangeParty "150"  
+SET CombatLogRangePartyPet "150"  
+SET CombatLogRangeFriendlyPlayers "150"  
+SET CombatLogRangeFriendlyPlayersPets "150"  
+SET CombatLogRangeHostilePlayers "150"  
+SET CombatLogRangeHostilePlayersPets "150"  
+SET CombatLogRangeCreature "150"  
+
 # DPSMate #
+
 #A combat analyzation tool#
 
 #What is DPSMate?#
@@ -40,20 +64,7 @@ Misc:
 ![img](http://i.imgur.com/AObESgI.jpg)  
 ![img](http://i.imgur.com/jOTG3ip.png)  
 
-#**Download and install:** 
-1. Download the addon folder here.
-2. Put the contents of the folder into your Interface/AddOn folder.  
-3. I recommend to increase the addon memory to 150 mb.
-4. Remove DPSMate.lua and DPSMate.lua.bak in your WTF/Account/YOUR ACC NAME/Kronos/YOUR CHAR NAME/SavedVariables/ (if you had DPSMate installed before)
-5. I recommend to disable SW_Stats.  
-6. Add these lines to your WTF/config.wtf:  
-SET CombatLogRangeParty "150"  
-SET CombatLogRangePartyPet "150"  
-SET CombatLogRangeFriendlyPlayers "150"  
-SET CombatLogRangeFriendlyPlayersPets "150"  
-SET CombatLogRangeHostilePlayers "150"  
-SET CombatLogRangeHostilePlayersPets "150"  
-SET CombatLogRangeCreature "150"  
+
 
 #**Legacy Logs!**  
 Legacy Logs is an world of logs-like evaluation site, using DPSMate to give you an indeph analyzation of your raid.   
