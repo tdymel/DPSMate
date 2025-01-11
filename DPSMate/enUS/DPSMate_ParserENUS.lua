@@ -555,7 +555,7 @@ function DPSMate.Parser:SelfMisses(msg)
 	end
 end
 
-local SSDChoices = {" hits ", " crits ", " was ", " is parried by ", " missed ", " is absorbed by ", "ast ", " failed.", "You interrupt ", " is reflected back ", "You perform ", "You resisted "}
+local SSDChoices = {" hits ", " crits ", " was ", " is parried by ", " missed ", " is absorbed by ", "ast ", " failed.", "You interrupt ", " is reflected back ", "You perform ", "You resisted ", "ZONE_INFO: ", "COMBATANT_INFO: ", "LOOT: "}
 function DPSMate.Parser:SelfSpellDMG(msg)
 	local i,j,k = 0,0,0
 	local nextword, choice, ability;
@@ -573,6 +573,7 @@ function DPSMate.Parser:SelfSpellDMG(msg)
 	if choice == 10 then return end
 	if choice == 11 then return end
 	--if choice == 13 then return end
+	if choice == 13 or choice == 14 or choice == 15 then return end
 
 	-- TODO: You resisted your Flames.
 	if choice == 12 then
