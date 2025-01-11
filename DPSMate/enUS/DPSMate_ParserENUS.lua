@@ -1148,7 +1148,7 @@ function DPSMate.Parser:CreatureVsSelfHits(msg)
 			end
 		end
 		DB:EnemyDamage(false, nil, target, AAttack, hit, crit, 0, 0, 0, 0, amount, source, block, crush)
-		DB:DamageTaken(target, AAttack, hit, crit, 0, 0, 0, 0, amount, source, crush)
+		DB:DamageTaken(target, AAttack, hit, crit, 0, 0, 0, 0, amount, source, crush, block)
 		DB:DeathHistory(target, a, AAttack, amount, hit, crit, 0, crush)
 	else
 		i,j = strfind(msg, " on ", k, true)
