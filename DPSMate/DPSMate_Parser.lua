@@ -774,14 +774,31 @@ end
 
 DPSMate.Parser.CHAT_MSG_COMBAT_PET_HITS = function(arg1)
 	this:PetHits(arg1)
+	if DPSMate.SUPER_WOW_LOADED then
+		this:PetHits(string.gsub(arg1, "%s*%(" .. UnitName("player") .. "%)*", ""))
+	end
 end
 
 DPSMate.Parser.CHAT_MSG_COMBAT_PET_MISSES = function(arg1)
 	this:PetMisses(arg1)
+	if DPSMate.SUPER_WOW_LOADED then
+		this:PetMisses(string.gsub(arg1, "%s*%(" .. UnitName("player") .. "%)*", ""))
+	end
 end
 
 DPSMate.Parser.CHAT_MSG_SPELL_PET_DAMAGE = function(arg1)
 	this:PetSpellDamage(arg1)
+	if DPSMate.SUPER_WOW_LOADED then
+		this:PetSpellDamage(string.gsub(arg1, "%s*%(" .. UnitName("player") .. "%)*", ""))
+	end
 end
+
+-- DPSMate.Parser.CHAT_MSG_SPELL_PET_BUFF = function(arg1)
+-- 	this:PetSpellBuff(arg1)
+-- 	if DPSMate.SUPER_WOW_LOADED then
+-- 		this:PetSpellBuff(string.gsub(arg1, "%s*%(" .. UnitName("player") .. "%)*", ""))
+-- 	end
+-- end
+
 
 DPSMate.Parser:SetScript("OnEvent", function() if this[event] then this[event](arg1) end end)

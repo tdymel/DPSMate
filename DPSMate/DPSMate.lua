@@ -1,6 +1,7 @@
 -- Global Variables
+local _G = _G or getfenv()
 DPSMate = {}
-DPSMate.VERSION = 130
+DPSMate.VERSION = 130.1
 DPSMate.LOCALE = GetLocale()
 DPSMate.SYNCVERSION = DPSMate.VERSION..DPSMate.LOCALE
 DPSMate.Parser = CreateFrame("Frame", nil, UIParent)
@@ -9,6 +10,7 @@ DPSMate.DB = CreateFrame("Frame", nil, UIParent)
 DPSMate.Options = CreateFrame("Frame", nil, UIParent)
 DPSMate.Sync = CreateFrame("Frame", nil, UIParent)
 DPSMate.Modules = {}
+DPSMate.SUPER_WOW_LOADED = type(_G.SetAutoloot) == "function"
 DPSMate.Events = {
 	--"CHAT_MSG_ADDON",
 	"PLAYER_AURAS_CHANGED",
